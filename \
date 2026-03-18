@@ -1,0 +1,11 @@
+
+
+export default function Nav() {
+
+	const SECTIONS strng[] = ["About", "Skills", "Experience", "Projects", "Contact", "Hire Me"];
+
+	return (
+		<>
+		</>
+	)
+}
