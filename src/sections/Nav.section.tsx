@@ -50,13 +50,13 @@ export default function Nav() {
 							onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
 							className="md:hidden p-2 text-white cursor-pointer"
 						>
-							{!isMobileMenuOpen ? <XIcon className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
+							{isMobileMenuOpen ? <XIcon className="w-6 h-6" /> : <MenuIcon className="w-6 h-6" />}
 						</button>
 					</div>
 				</div>
 			</nav>
 
-			<div className={`fixed inset-0 z-40 bg-black/95 backdrop-blur-lg md:hidden ${isMobileMenuOpen ? "opacity-0" : "opacity-100"}`}>
+			<div className={`fixed inset-0 z-40 bg-black/95 backdrop-blur-lg md:hidden ${!isMobileMenuOpen ? "opacity-0" : "opacity-100"}`}>
 				<div className="flex flex-col items-center justify-center h-full gap-8">
 					{SECTIONS.map((section) => {
 						return (
