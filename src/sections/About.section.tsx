@@ -55,7 +55,7 @@ export default function AboutSection() {
 							of web technologies.
 						</p>
 						<p className="text-lg text-gray-300 leading-relaxed">
-							When I'm not coding, you'll find me experimenting with the latest in cloud infrastructure, working on my <strong className="text-white">linux</strong> homelab and embedded projects, or exploring new frameworks and tools.
+							When I'm not coding, you'll find me in my family caregiver role, working on my <strong className="text-white">linux</strong> homelab and embedded projects, or exploring new frameworks and tools.
 						</p>
 					</div>
 
