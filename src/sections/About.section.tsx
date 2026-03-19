@@ -1,5 +1,6 @@
 import { Code2, Sparkles, Zap } from "lucide-react";
 import { GradText, SectionTitle } from "../components/Typography.component";
+import portrait from "../assets/Portrait_Jay.jpg"
 
 export default function AboutSection() {
 	const features = [
@@ -37,9 +38,8 @@ export default function AboutSection() {
 					<div className="relative">
 						<div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl blur-2xl opacity-20" />
 						<img
-							src="https://images.unsplash.com/photo-1646153389640-958d7ba1a864?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBjb2RpbmclMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzcxNDY2NTY4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-							alt="Workspace"
-							className="relative rounded-2xl w-full h-96 object-cover border border-white/10"
+							src={portrait} alt="Workspace"
+							className="relative rounded-2xl object-top w-full h-128 object-cover border border-white/10"
 						/>
 					</div>
 
