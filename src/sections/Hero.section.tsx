@@ -17,7 +17,7 @@ export default function HeroSection() {
 				<PageTitle>
 					<span className="block">Jared Reyes</span>
 					<GradText>
-						Software Engineer
+						Web Developer
 					</GradText>
 				</PageTitle>
 				<p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">

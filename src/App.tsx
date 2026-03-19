@@ -1,7 +1,8 @@
 import AboutSection from "./sections/About.section"
-import { ExperienceSection } from "./sections/Experience.section"
+import ExperienceSection from "./sections/Experience.section"
 import HeroSection from "./sections/Hero.section"
 import Nav from "./sections/Nav.section"
+import SkillsSection from "./sections/Skills.section"
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
 				<main>
 					<HeroSection />
 					<AboutSection />
+					<SkillsSection />
 					<ExperienceSection />
 				</main>
 			</div>
@@ -19,4 +21,4 @@ function App() {
 	)
 }
 
-export default App
+export default App;

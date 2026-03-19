@@ -1,7 +1,7 @@
 import { Briefcase, Calendar } from 'lucide-react';
 import { GradText, SectionTitle } from '../components/Typography.component';
 
-export function ExperienceSection() {
+export default function ExperienceSection() {
 
 	const experiences = [
 		{
