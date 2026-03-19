@@ -1,3 +1,4 @@
+import AboutSection from "./sections/About.section"
 import HeroSection from "./sections/Hero.section"
 import Nav from "./sections/Nav.section"
 
@@ -9,6 +10,7 @@ function App() {
 				<Nav />
 				<main>
 					<HeroSection />
+					<AboutSection />
 				</main>
 			</div>
 		</>

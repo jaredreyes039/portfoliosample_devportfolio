@@ -1,5 +1,5 @@
 import { GithubIcon, MailIcon } from "lucide-react";
-import { GradText, Title } from "../components/Typography.component";
+import { GradText, PageTitle } from "../components/Typography.component";
 
 
 export default function HeroSection() {
@@ -13,12 +13,12 @@ export default function HeroSection() {
 						Available for opportunities
 					</span>
 				</div>
-				<Title>
+				<PageTitle>
 					<span className="block">Jared Reyes</span>
 					<GradText>
 						Software Engineer
 					</GradText>
-				</Title>
+				</PageTitle>
 				<p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
 					Crafting elegant solutions with modern technologies.
 					Full-stack developer specializing in React, Node.js, and cloud architecture.

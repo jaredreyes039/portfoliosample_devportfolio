@@ -4,12 +4,20 @@ interface Props {
 	children: ReactNode
 }
 
-export function Title({ children }: Props) {
+export function PageTitle({ children }: Props) {
 
 	return (
 		<h1 className="text-6xl md:text-8xl mb-6 text-white tracking-tight">
 			{children}
 		</h1>
+	)
+}
+
+export function SectionTitle({ children }: Props) {
+	return (
+		<h2 className="text-5xl md:text-6xl mb-4 text-white">
+			{children}
+		</h2>
 	)
 }
 
