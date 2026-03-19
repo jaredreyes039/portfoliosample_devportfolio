@@ -50,12 +50,12 @@ export default function AboutSection() {
 							and stable web experiences.
 						</p>
 						<p className="text-lg text-gray-300 leading-relaxed">
-							Currently focused on <strong className="text-white">React, TypeScript, and Node.js</strong>, I'm passionate
-							about clean architecture, developer experience, and staying on the cutting edge
+							While I had to take a pause in my career to take on caregiving, moving back into the industry currently has me focused on revisting <strong className="text-white">React, TypeScript, and Node.js</strong> while expanding my knowledge in newer technologies and stacks. I'm passionate
+							about clean architecture, developer experience (ask me about my <strong className="text-white">linux environment</strong>), and staying on the cutting edge
 							of web technologies.
 						</p>
 						<p className="text-lg text-gray-300 leading-relaxed">
-							When I'm not coding, you'll find me in my family caregiver role, working on my <strong className="text-white">linux</strong> homelab and embedded projects, or exploring new frameworks and tools.
+							When I'm not coding, you'll find me in my family caregiver role, working on my <strong className="text-white">homelab</strong> and experimenting with embedded projects, or exploring new frameworks and tools.
 						</p>
 					</div>
 
