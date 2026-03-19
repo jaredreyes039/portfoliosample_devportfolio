@@ -8,10 +8,17 @@ export default function HeroSection() {
 		<section className="relative min-h-screen flex items-center justify-center overflow-hidden">
 			<div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-cyan-900/20" />
 			<div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-				<div className="inline-block mb-4 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10">
+				<div className="inline-block mr-2  mb-4 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10">
 					<span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
 						Available for opportunities
 					</span>
+
+				</div>
+				<div className="inline-block ml-2 mb-4 px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10">
+					<span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
+						Ask about my linux dot files!
+					</span>
+
 				</div>
 				<PageTitle>
 					<span className="block">Jared Reyes</span>
