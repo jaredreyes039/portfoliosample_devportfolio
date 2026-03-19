@@ -45,18 +45,17 @@ export default function AboutSection() {
 
 					<div className="space-y-6">
 						<p className="text-lg text-gray-300 leading-relaxed">
-							Hey! I'm a software engineer with <strong className="text-white">5+ years</strong> of experience building
-							web applications that users love. I specialize in creating performant, accessible,
-							and beautiful digital experiences.
+							Hey! I'm a software engineer with <strong className="text-white">4+ years</strong> of experience building
+							web applications that go beyond user expectations. I specialize in creating performant, accessible,
+							and stable web experiences.
 						</p>
 						<p className="text-lg text-gray-300 leading-relaxed">
-							Currently focused on React, TypeScript, and Node.js ecosystems, I'm passionate
+							Currently focused on <strong className="text-white">React, TypeScript, and Node.js</strong>, I'm passionate
 							about clean architecture, developer experience, and staying on the cutting edge
 							of web technologies.
 						</p>
 						<p className="text-lg text-gray-300 leading-relaxed">
-							When I'm not coding, you'll find me contributing to open source, mentoring
-							junior developers, or exploring new frameworks and tools.
+							When I'm not coding, you'll find me experimenting with the latest in cloud infrastructure, working on my <strong className="text-white">linux</strong> homelab and embedded projects, or exploring new frameworks and tools.
 						</p>
 					</div>
 
