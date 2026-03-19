@@ -56,7 +56,7 @@ export default function Nav() {
 				</div>
 			</nav>
 
-			<div className={`fixed inset-0 z-40 bg-black/95 backdrop-blur-lg md:hidden ${!isMobileMenuOpen ? "opacity-0" : "opacity-100"}`}>
+			<div className={`fixed inset-0 z-40 bg-black/95 backdrop-blur-lg md:hidden ${!isMobileMenuOpen ? "opacity-0 hiden" : "opacity-100 block"}`}>
 				<div className="flex flex-col items-center justify-center h-full gap-8">
 					{SECTIONS.map((section) => {
 						return (
