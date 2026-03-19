@@ -1,5 +1,5 @@
 import { Code2, Sparkles, Zap } from "lucide-react";
-import { GradText, Title } from "../components/Typography.component";
+import { GradText, SectionTitle } from "../components/Typography.component";
 
 export default function AboutSection() {
 	const features = [
@@ -27,9 +27,9 @@ export default function AboutSection() {
 				<div
 					className="text-center mb-16"
 				>
-					<h2 className="text-5xl md:text-6xl mb-4 text-white">
-						About <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Me</span>
-					</h2>
+					<SectionTitle>
+						About <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400"><GradText>Me</GradText></span>
+					</SectionTitle>
 					<div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-cyan-500 mx-auto rounded-full" />
 				</div>
 
