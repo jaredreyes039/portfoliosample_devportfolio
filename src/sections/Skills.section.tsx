@@ -88,7 +88,7 @@ export default function SkillsSection() {
 				>
 					<p className="text-gray-400 mb-4">Also experienced with:</p>
 					<div className="flex flex-wrap justify-center gap-3">
-						{['Git', 'Linux', 'Jest', 'Redux', 'Webpack', 'Yup', 'Scripting', 'Python', 'Microservices', 'GraphQL', 'OAuth', 'REST APIs', 'Figma', 'Gatsby', 'Storybook'].map((tool) => (
+						{['Git', 'Linux', 'Jest', 'Redux', 'Scripting', 'Python', 'Microservices', 'GraphQL', 'OAuth', 'REST APIs', 'Figma', 'Gatsby', 'Storybook'].map((tool) => (
 							<span
 								key={tool}
 								className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-gray-300 text-sm hover:border-purple-400/50 hover:bg-white/10 transition-all"

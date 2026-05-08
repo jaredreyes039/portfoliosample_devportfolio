@@ -1,6 +1,8 @@
 import { Code2, Sparkles, Zap } from "lucide-react";
 import { GradText, SectionTitle } from "../components/Typography.component";
+import { motion } from 'motion/react'
 import portrait from "../assets/Portrait_Jay.jpg"
+
 
 export default function AboutSection() {
 	const features = [
@@ -64,7 +66,8 @@ export default function AboutSection() {
 					{features.map((feature) => (
 						<div
 							key={feature.title}
-							className="p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-purple-400/50 transition-all group"
+							className="[clip-path:var(--card-clip)] p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-purple-400/50 transition-all group"
+
 						>
 							<div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-cyan-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
 								<feature.icon className="w-6 h-6 text-purple-400" />
