@@ -1,6 +1,5 @@
 import { Code2, Sparkles, Zap } from "lucide-react";
 import { GradText, SectionTitle } from "../components/Typography.component";
-import { motion } from 'motion/react'
 import portrait from "../assets/Portrait_Jay.jpg"
 
 
