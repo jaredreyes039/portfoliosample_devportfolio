@@ -1,9 +1,15 @@
 import { Code2, Sparkles, Zap } from "lucide-react";
 import { GradText, SectionTitle } from "../components/Typography.component";
 import portrait from "../assets/Portrait_Jay.jpg"
-
+import {motion} from 'motion/react'
+import { useInView } from "motion/react";	
+import { useRef } from "react";	
 
 export default function AboutSection() {
+
+	const ref = useRef(null);
+  	const isInView = useInView(ref, { once: true, margin: "-100px" });
+
 	const features = [
 		{
 			icon: Code2,
@@ -25,15 +31,18 @@ export default function AboutSection() {
 	return (
 		<section id="about" className="py-32 overflow-hidden relative px-4">
 			<div className="absolute inset-0 bg-gradient-to-b from-black via-purple-950/10 to-black" />
-			<div className="max-w-6xl mx-auto relative z-10">
-				<div
-					className="text-center mb-16"
-				>
+			<div className="max-w-6xl mx-auto relative z-10" ref={ref}>
+			 <motion.div
+          			initial={{ opacity: 0.01, y: 30 }}
+          			animate={isInView ? { opacity: 1, y: 0 } : {}}
+          			transition={{ duration: 0.6 }}
+          			className="text-center mb-16"
+        			>
 					<SectionTitle>
 						About <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400"><GradText>Me</GradText></span>
 					</SectionTitle>
 					<div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-cyan-500 mx-auto rounded-full" />
-				</div>
+				</motion.div>
 
 				<div className="grid md:grid-cols-2 gap-12 items-center mb-20">
 					<div className="relative">
@@ -46,34 +55,35 @@ export default function AboutSection() {
 
 					<div className="space-y-6">
 						<p className="text-lg text-gray-300 leading-relaxed">
-							Hey! I'm a software engineer with <strong className="text-white">4+ years</strong> of experience building
-							web applications that go beyond user expectations. I specialize in creating performant, accessible,
-							and stable web experiences.
+							Hey! I'm a software engineer with <strong className="text-white">4+ years</strong> of experience building systems and services from personal projects to startup minimum viable products. I specialize in creating performant, accessible,
+							and stable web experiences..
 						</p>
 						<p className="text-lg text-gray-300 leading-relaxed">
-							While I had to take a pause in my career to take on caregiving, moving back into the industry currently has me focused on revisting <strong className="text-white">React, TypeScript, and Node.js</strong> while expanding my knowledge in newer technologies and stacks. I'm passionate
-							about clean architecture, developer experience (ask me about my <strong className="text-white">linux environment</strong>), and staying on the cutting edge
-							of web technologies.
+							While I had to take a pause in my career to take on the role of family caregiver, moving back into the industry currently has been a great opportunityto focus on my classic tech stack (including <strong className="text-white">React, TypeScript, and Node.js</strong>) while expanding my knowledge in modern technologies and solutions. I'm passionate
+							about the developer experience (ask me about my <strong className="text-white">linux environment</strong>), and staying on the cutting edge
+							of web technologies; to me, being a software engineer is a social contract with one's self to learn forver.
 						</p>
 						<p className="text-lg text-gray-300 leading-relaxed">
-							When I'm not coding, you'll find me in my family caregiver role, working on my <strong className="text-white">homelab</strong> and experimenting with embedded projects, or exploring new frameworks and tools.
+							When I'm not coding, I'm often buried in some technical book, working on my <strong className="text-white">homelab</strong>, or exploring some of my other niche interests from math to botany.
 						</p>
 					</div>
 
 				</div>
 				<div className="grid md:grid-cols-3 gap-6">
-					{features.map((feature) => (
-						<div
-							key={feature.title}
-							className="[clip-path:var(--card-clip)] p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-purple-400/50 transition-all group"
-
+					{features.map((feature, idx) => (
+						<motion.div
+							key={feature.title + idx}
+							initial={{ opacity: 0.01, y: 30 }}
+              						animate={isInView ? { opacity: 1, y: 0 } : {}}
+              						transition={{ duration: 1, delay: 0.4 + idx * 0.1 }}
+							className="[clip-path:var(--card-clip)] p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-purple-400/50 group"
 						>
-							<div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-cyan-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+							<div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-cyan-500/20 flex items-center justify-center mb-4 group-hover:scale-110">
 								<feature.icon className="w-6 h-6 text-purple-400" />
 							</div>
 							<h3 className="text-xl mb-2 text-white">{feature.title}</h3>
 							<p className="text-gray-400">{feature.description}</p>
-						</div>
+						</motion.div>
 					))}
 				</div>
 			</div>

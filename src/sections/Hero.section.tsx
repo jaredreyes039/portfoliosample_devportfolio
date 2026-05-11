@@ -4,6 +4,15 @@ import { motion } from 'motion/react'
 
 export default function HeroSection() {
 
+	// For text animation
+	const NAME_STR = "Jared Reyes";
+	const NAME_STR_ARR = [...NAME_STR]
+	const TITLE_STR = "Web Developer"
+	const TITLE_STR_ARR = [...TITLE_STR]
+	
+	// BUG: For some reason the rendering for the NAME_STR_ARR is not including the space between "Jared" and "Reyes" despite doing so for "Web Developer" when rendering TITLE_STR_ARR, this seems to be a working solution for now, I've checked Typography.component.tsx and the current file but found no discernable cause
+	NAME_STR_ARR.splice(5,0,`\u00A0`);
+
 	return (
 		<section className="relative min-h-screen flex items-center justify-center overflow-hidden">
 			<motion.div
@@ -49,10 +58,37 @@ export default function HeroSection() {
 
 				</motion.div>
 				<PageTitle>
-					<span className="block">Jared Reyes</span>
+					<div className="flex align-center">
+						{NAME_STR_ARR.map((char, idx)=>{
+							return (
+								<motion.span
+									initial={{opacity: 0.01}}
+									animate={{opacity: 1}}
+									transition={{delay: idx/10}}
+									key={char+'-name-'+idx}
+								>
+									{char}
+								</motion.span>
+							)
+						})}
+					</div>
+					<div className="flex align-center">
 					<GradText>
-						Web Developer
+					{TITLE_STR_ARR.map((char, idx)=>{
+							return (
+								<motion.span
+									initial={{opacity: 0.01}}
+									animate={{opacity: 1}}
+									transition={{delay: idx/10}}
+									key={char + '-title-' + idx}
+									>
+									{char}
+								</motion.span>
+							)
+						})}
+
 					</GradText>
+					</div>
 				</PageTitle>
 				<p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
 					Crafting elegant solutions with modern technologies.

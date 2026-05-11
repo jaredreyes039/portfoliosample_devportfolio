@@ -37,10 +37,6 @@ export default function SkillsSection() {
 		<section id="skills" className="py-32 px-4 relative overflow-hidden">
 			<div className="absolute inset-0">
 				<div className="absolute inset-0 bg-gradient-to-b from-black via-cyan-950/10 to-black" />
-				<div className="absolute inset-0 opacity-10" style={{
-					backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
-					backgroundSize: '50px 50px',
-				}} />
 			</div>
 
 			<div className="max-w-6xl mx-auto relative z-10" >
