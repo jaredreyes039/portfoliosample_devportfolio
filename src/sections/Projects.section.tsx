@@ -14,7 +14,7 @@ export default function ProjectsSection() {
 			description: 'Full-stack sample OAuth Signup/Signin page following OpenID standards in a secure NodeJS & ExpressJS backend environment connected to an SQL store.',
 			image: 'https://images.unsplash.com/photo-1587522630593-3b9e5f3255f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwd29ya3NwYWNlJTIwc2V0dXB8ZW58MXx8fHwxNzcxMzYzNzk2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
 			tags: ['React w/ Tanstack Router', 'Node.js', 'PostgreSQL', 'ExpressJS', 'PassportJS & OAuth', 'JSWT'],
-			github: '#',
+			github: 'https://github.com/jaredreyes039/LoginSample_FreelancePro',
 			live: '#',
 		},
 		{
@@ -36,7 +36,7 @@ export default function ProjectsSection() {
 	];
 
 	return (
-		<section id="projects" className="py-32 px-4 relative overflow-hidden">
+		<section id="projects" className="py-16 px-4 relative overflow-hidden">
 			{/* Background */}
 			<div className="absolute inset-0 bg-gradient-to-b from-black via-cyan-950/10 to-black" />
 
@@ -50,7 +50,11 @@ export default function ProjectsSection() {
 					<h2 className="text-5xl md:text-6xl mb-4 text-white">
 						Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Samples</span>
 					</h2>
-					<div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-cyan-500 mx-auto rounded-full" />
+					<div className="w-20 mb-6 h-1 bg-gradient-to-r from-purple-500 to-cyan-500 mx-auto rounded-full" />
+					<p className="text-xl text-gray-300 max-w-2xl mx-auto">
+						Check out these prebuilt samples demonstrating my experience with various infrastructures, challenges,and technologies.	
+					</p>
+
 				</motion.div>
 
 				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -103,6 +107,7 @@ export default function ProjectsSection() {
 
 							{/* Project info */}
 							<div className="p-6">
+								<a href={project.github}>
 								<h3 className="text-xl mb-2 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 transition-all">
 									{project.title}
 								</h3>
@@ -119,6 +124,7 @@ export default function ProjectsSection() {
 										</span>
 									))}
 								</div>
+								</a>
 							</div>
 						</motion.div>
 					))}

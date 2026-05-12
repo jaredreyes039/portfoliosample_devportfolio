@@ -42,7 +42,7 @@ export default function SkillsSection() {
 	];
 
 	return (
-		<section id="skills" className="relative py-32 px-4 flex items-center justify-center overflow-hidden">
+		<section id="skills" className="relative py-16 px-4 flex items-center justify-center overflow-hidden">
 				<ScrollVelocity
 				texts={["Frontend Frameworks", "Microservice Architecture", "Cloud Infrastructure", "RESTful APIs"]}
 				velocity={25}

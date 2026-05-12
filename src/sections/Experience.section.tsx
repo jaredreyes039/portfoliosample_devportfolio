@@ -12,7 +12,7 @@ export default function ExperienceSection() {
 		{
 			company: 'Freelance',
 			role: 'Full Stack Developer',
-			period: '2023 - 2025 | Present',
+			period: '2022 - Present',
 			description: 'Built MVP and core features for a SaaS platform, constructed the front end for a now defunct fasion site, and interfaced code with third-party software to assist users with transitioning into the software.',
 			highlights: [
 				"Led the recovery and modernization of an abandoned startup MVP, successfully migrating the application from Angular 13 to Angular 15 and helping secure a six-figure investment following the platform overhaul.",
@@ -29,7 +29,7 @@ export default function ExperienceSection() {
 	];
 
 	return (
-		<section id="experience" className="py-32 px-4 relative overflow-hidden">
+		<section id="experience" className="py-16 px-4 relative overflow-hidden">
 			<div className="absolute inset-0 bg-gradient-to-b from-black via-purple-950/10 to-black" />
 
 			<div className="max-w-4xl mx-auto relative z-10" ref={ref}>

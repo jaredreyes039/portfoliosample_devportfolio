@@ -29,7 +29,7 @@ export default function AboutSection() {
 	];
 
 	return (
-		<section id="about" className="py-32 overflow-hidden relative px-4 ">
+		<section id="about" className="py-16 overflow-hidden relative px-4 ">
 			<div className="absolute inset-0 bg-gradient-to-tr from-black via-black to-cyan-900/20" />
 			<div className="absolute inset-0 bg-gradient-to-b from-black/20 via-purple-950/10 to-black/20" />
 			<div className="max-w-6xl mx-auto relative z-10" ref={ref}>
@@ -51,20 +51,18 @@ export default function AboutSection() {
 						<div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl blur-2xl opacity-20" />
 						<img
 							src={portrait} alt="Workspace"
-							className="relative rounded-2xl object-top w-full h-128 object-cover border border-white/10"
+							className="filter grayscale relative rounded-2xl object-top w-full md:h-128 object-cover border border-white/10"
 						/>
 					</div>
 
 					<div className="space-y-6">
 						<p className="text-lg text-gray-300 leading-relaxed">
-							Hi, I’m Jared — a full-stack software engineer with experience leading application modernization, cloud infrastructure deployment, and DevOps implementation across startup and freelance environments. My background includes building scalable web applications and backend systems using technologies such as React, TypeScript, Node.js, Linux, and modern CI/CD workflows, with a strong emphasis on performance, maintainability, and developer experience.
+							Hi, I’m Jared, a full stack software engineer specializing in application modernization, cloud infrastructure, and DevOps. I build scalable web applications and backend systems using React, TypeScript, Node.js, Linux, and modern CI/CD workflows, with a focus on performance, maintainability, and developer experience.
 						</p>
 						<p className="text-lg text-gray-300 leading-relaxed">
-							After stepping away from the industry for a period to serve as a family caregiver, returning to software engineering has given me the opportunity to deepen my expertise in modern web technologies while refining the core stack I’ve worked with throughout my career. I’m especially passionate about clean architecture, efficient tooling, and creating thoughtful development environments that improve both productivity and long-term maintainability.
+							After stepping away from the industry to serve as a family caregiver, I returned with a renewed focus on modern web technologies, clean architecture, and efficient tooling. I’m driven by continuous learning, curiosity, and building scalable, maintainable systems.
 						</p>
-						<p className="text-lg text-gray-300 leading-relaxed">
-							I enjoy staying current with emerging technologies and continuously expanding my technical knowledge. For me, software engineering is rooted in continuous learning, curiosity, and adaptability.
-						</p>
+						
 					</div>
 
 				</div>
