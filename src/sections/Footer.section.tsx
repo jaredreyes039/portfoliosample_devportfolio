@@ -26,7 +26,7 @@ export default function FooterSection() {
 								Jared Reyes
 							</span>
 						</h3>
-						<p className="text-gray-400 text-sm">Passionate Web Developer</p>
+						<p className="text-gray-400 text-sm">Experience-Driven Web Developer</p>
 					</motion.div>
 
 					{/* Social Links */}

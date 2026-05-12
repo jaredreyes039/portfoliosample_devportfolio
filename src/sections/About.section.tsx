@@ -29,10 +29,12 @@ export default function AboutSection() {
 	];
 
 	return (
-		<section id="about" className="py-32 overflow-hidden relative px-4">
-			<div className="absolute inset-0 bg-gradient-to-b from-black via-purple-950/10 to-black" />
+		<section id="about" className="py-32 overflow-hidden relative px-4 ">
+			<div className="absolute inset-0 bg-gradient-to-tr from-black via-black to-cyan-900/20" />
+			<div className="absolute inset-0 bg-gradient-to-b from-black/20 via-purple-950/10 to-black/20" />
 			<div className="max-w-6xl mx-auto relative z-10" ref={ref}>
 			 <motion.div
+				key={"aboutTitle"}
           			initial={{ opacity: 0.01, y: 30 }}
           			animate={isInView ? { opacity: 1, y: 0 } : {}}
           			transition={{ duration: 0.6 }}
@@ -55,16 +57,13 @@ export default function AboutSection() {
 
 					<div className="space-y-6">
 						<p className="text-lg text-gray-300 leading-relaxed">
-							Hey! I'm a software engineer with <strong className="text-white">4+ years</strong> of experience building systems and services from personal projects to startup minimum viable products. I specialize in creating performant, accessible,
-							and stable web experiences..
+							Hi, I’m Jared — a full-stack software engineer with experience leading application modernization, cloud infrastructure deployment, and DevOps implementation across startup and freelance environments. My background includes building scalable web applications and backend systems using technologies such as React, TypeScript, Node.js, Linux, and modern CI/CD workflows, with a strong emphasis on performance, maintainability, and developer experience.
 						</p>
 						<p className="text-lg text-gray-300 leading-relaxed">
-							While I had to take a pause in my career to take on the role of family caregiver, moving back into the industry currently has been a great opportunityto focus on my classic tech stack (including <strong className="text-white">React, TypeScript, and Node.js</strong>) while expanding my knowledge in modern technologies and solutions. I'm passionate
-							about the developer experience (ask me about my <strong className="text-white">linux environment</strong>), and staying on the cutting edge
-							of web technologies; to me, being a software engineer is a social contract with one's self to learn forver.
+							After stepping away from the industry for a period to serve as a family caregiver, returning to software engineering has given me the opportunity to deepen my expertise in modern web technologies while refining the core stack I’ve worked with throughout my career. I’m especially passionate about clean architecture, efficient tooling, and creating thoughtful development environments that improve both productivity and long-term maintainability.
 						</p>
 						<p className="text-lg text-gray-300 leading-relaxed">
-							When I'm not coding, I'm often buried in some technical book, working on my <strong className="text-white">homelab</strong>, or exploring some of my other niche interests from math to botany.
+							I enjoy staying current with emerging technologies and continuously expanding my technical knowledge. For me, software engineering is rooted in continuous learning, curiosity, and adaptability.
 						</p>
 					</div>
 

@@ -1,13 +1,14 @@
 import { GithubIcon, MailIcon } from "lucide-react";
 import { GradText, PageTitle } from "../components/Typography.component";
 import { motion } from 'motion/react'
+import ScrollVelocity from "../components/ScrollVelocity.component";
 
 export default function HeroSection() {
 
 	// For text animation
 	const NAME_STR = "Jared Reyes";
 	const NAME_STR_ARR = [...NAME_STR]
-	const TITLE_STR = "Web Developer"
+	const TITLE_STR = "Software Engineer"
 	const TITLE_STR_ARR = [...TITLE_STR]
 	
 	// BUG: For some reason the rendering for the NAME_STR_ARR is not including the space between "Jared" and "Reyes" despite doing so for "Web Developer" when rendering TITLE_STR_ARR, this seems to be a working solution for now, I've checked Typography.component.tsx and the current file but found no discernable cause
@@ -15,6 +16,14 @@ export default function HeroSection() {
 
 	return (
 		<section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+			<ScrollVelocity
+				texts={['Software Engineer', 'Experience-Driven', 'Passionate Programmer']}
+				velocity={25}
+				className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 opacity-[0.1]"
+				numCopies={9}
+				damping={500}
+				stiffness={300}
+			/>
 			<motion.div
         			className="absolute top-20 left-20 w-96 h-96 bg-purple-500/30 rounded-full blur-3xl"
         			animate={{
@@ -27,18 +36,7 @@ export default function HeroSection() {
         				ease: "easeInOut",
         			}}
       			/>
-      			<motion.div
-        			className="absolute bottom-24 right-24 w-96 h-96 bg-cyan-500/30 rounded-full blur-3xl"
-        			animate={{
-          				scale: [1.2, 1, 1.2],
-          				opacity: [0.3, 0.5, 0.3],
-        			}}
-        			transition={{
-          			duration: 8,
-          			repeat: Infinity,
-          			ease: "easeInOut",
-        			}}
-      			/>
+      			
 			<div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-cyan-900/20" />
 			<motion.div 
 				className="relative z-10 text-center px-4 max-w-5xl mx-auto"
@@ -58,7 +56,7 @@ export default function HeroSection() {
 
 				</motion.div>
 				<PageTitle>
-					<div className="flex align-center">
+					<div className="flex justify-center align-center">
 						{NAME_STR_ARR.map((char, idx)=>{
 							return (
 								<motion.span
@@ -79,7 +77,7 @@ export default function HeroSection() {
 								<motion.span
 									initial={{opacity: 0.01}}
 									animate={{opacity: 1}}
-									transition={{delay: idx/10}}
+									transition={{delay: idx/20}}
 									key={char + '-title-' + idx}
 									>
 									{char}

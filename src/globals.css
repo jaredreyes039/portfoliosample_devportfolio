@@ -40,6 +40,7 @@
 	--sidebar-accent-foreground: oklch(0.205 0 0);
 	--sidebar-border: oklch(0.922 0 0);
 	--sidebar-ring: oklch(0.708 0 0);
+	--bg-clip: polygon(0 35%,100% 0,100% 75%,0 100%);
 }
 
 .dark {
@@ -195,5 +196,35 @@
 		font-weight: var(--font-weight-normal);
 		line-height: 1.5;
 	}
+}
+
+.bg-clip {
+	clip-path: polygon(0 35%,100% 0,100% 75%,0 100%);
+}
+
+.parallax {
+  overflow: hidden;
+}
+
+.scroller {
+  display: flex;
+  white-space: nowrap;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 2.25rem;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
+}
+
+.scroller span {
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .scroller {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
 }
 

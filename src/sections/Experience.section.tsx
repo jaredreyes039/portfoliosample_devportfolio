@@ -1,57 +1,62 @@
 import { Briefcase, Calendar } from 'lucide-react';
 import { GradText, SectionTitle } from '../components/Typography.component';
+import {motion, useInView} from 'motion/react'
+import { useRef } from 'react';
 
 export default function ExperienceSection() {
 
-	const experiences = [
+	const ref = useRef(null);
+	const isInView = useInView(ref, {once: true, margin: '-100px'})
+
+	const WORK_EXPERIENCE = [
 		{
 			company: 'Freelance',
 			role: 'Full Stack Developer',
 			period: '2023 - 2025 | Present',
 			description: 'Built MVP and core features for a SaaS platform, constructed the front end for a now defunct fasion site, and interfaced code with third-party software to assist users with transitioning into the software.',
 			highlights: [
-				'Developed secure auth back-ends for various sites from user/pass to JSON web token',
-				'Built front-ends with various degrees of interactivity and accessibility while meeting design requirements',
-				'Consulted with clients on best approaches for architecture, deployment, management, and migration of various web projects',
+				"Led the recovery and modernization of an abandoned startup MVP, successfully migrating the application from Angular 13 to Angular 15 and helping secure a six-figure investment following the platform overhaul.",
+"Designed, deployed, and maintained secure backend infrastructure and server environments across multiple frameworks, languages, and cloud platforms for startups, small businesses, and independent clients.",
+"Configured, administered, and optimized Linux-based systems for both client environments and personal development infrastructure.",
+"Built and managed a complete DevOps pipeline using Azure DevOps, including CI/CD workflows, release management, and collaborative development processes.",
+"Conducted technical interviews, coordinated development efforts, and led a team of engineers to continue long-term MVP development beyond the initial contract engagement.",
+"Configured and orchestrated Azure services including Azure Virtual Machines, SQL Server, App Services, Web Apps, Private Endpoints, Cosmos DB, MariaDB, and Azure DevOps integrations.",
+"Implemented responsive, pixel-perfect user interfaces across multiple platforms while maintaining strong usability, accessibility, and performance standards.",
+"Collaborated with internal UI/UX teams to accurately translate design systems and mockups into production-ready frontend implementations.",
+"Developed custom plugins, templates, and workflow enhancements for productivity and note-taking platforms to improve user efficiency and experience."
 			],
-		},
-
-		{
-			company: 'Planning Synergies LLC',
-			role: 'Lead Software Engineer',
-			period: '2022 - 2023',
-			description: 'Built MVP and core features for an SaaS platform startup that had just entered into the market. Worked across both the front and back end of an abandoned monolith to bring it back to a stable and marketable MVP.',
-			highlights: [
-				'Breakdown of a deprecated monolithic repository into an orchestrated series of stable microservices',
-				'Led transition from a deprecated Angular version to the modern version for the time',
-				'Implemented a full devops environment and eliminated communication barriers between developers and designer',
-				'Interviewed developers and designers to build an efficient, motivated, and cooperative team to tackle the move from MVP to final product'
-			],
-		},
+		}
 	];
 
 	return (
 		<section id="experience" className="py-32 px-4 relative overflow-hidden">
 			<div className="absolute inset-0 bg-gradient-to-b from-black via-purple-950/10 to-black" />
 
-			<div className="max-w-4xl mx-auto relative z-10">
-				<div
+			<div className="max-w-4xl mx-auto relative z-10" ref={ref}>
+				<motion.div
+					key={"experienceTitle"}
+					initial={{opacity: 0.01, y: 30}}
+					animate={isInView ? {opacity: 1, y: 0}:{}}
+					transition={{duration: 0.6}}
 					className="text-center mb-16"
 				>
 					<SectionTitle>
 						Work <GradText>Experience</GradText>
 					</SectionTitle>
 					<div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-cyan-500 mx-auto rounded-full" />
-				</div>
+				</motion.div>
 
 				<div className="relative">
 					{/* Timeline line */}
 					<div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-purple-500 via-pink-500 to-cyan-500 hidden md:block" />
 
 					<div className="space-y-12">
-						{experiences.map((exp) => (
-							<div
-								key={exp.company}
+						{WORK_EXPERIENCE.map((exp, idx) => (
+							<motion.div
+								key={exp.company + idx}
+								initial={{opacity: 0.01, y: 30}}
+								animate={isInView? {opacity: 1, y:0} : {}}
+								transition={{duration: 0.6}}
 								className="relative"
 							>
 								<div className="absolute left-6 top-6 w-5 h-5 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 border-4 border-black hidden md:block" />
@@ -86,7 +91,7 @@ export default function ExperienceSection() {
 										))}
 									</ul>
 								</div>
-							</div>
+							</motion.div>
 						))}
 					</div>
 				</div>
