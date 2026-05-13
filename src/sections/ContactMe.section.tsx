@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
-import { useRef, useState } from 'react';
-import { Mail, MapPin, Send } from 'lucide-react';
+import { useRef } from 'react';
+import { Mail, MapPin } from 'lucide-react';
 import ContactForm from '../forms/Contact.form.component';
 
 // THIS IS WHERE AWS LAMBDA IS PLANNED TO BE USED FOR SERVERLESS FORM MANAGEMENT
