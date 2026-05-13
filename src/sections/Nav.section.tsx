@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { GradText } from '../components/Typography.component';
+import logo from '../assets/portfolio_logo_1_1.png';
 import { MenuIcon, XIcon } from 'lucide-react';
 
 export default function Nav() {
@@ -30,7 +30,7 @@ export default function Nav() {
 				<div className="max-w-7xl mx-auto px-4 py-4">
 					<div className="flex items-center justify-between">
 						<a className="text-2xl text-white" href="#">
-							<GradText>JR</GradText>
+							<img src={logo} className="w-12 h-12 rounded-full hover:scale-[1.1] transition-all duration-150" />
 						</a>
 						<div className="hidden md:flex items-center gap-8">
 							{SECTIONS.map((section) => {
