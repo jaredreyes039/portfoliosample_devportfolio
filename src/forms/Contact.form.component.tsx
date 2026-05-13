@@ -13,13 +13,13 @@ export default function ContactForm(){
 	const [isLoading, setIsLoading] = useState(false);
 	const [isSubmitted, setIsSubmitted] = useState(false);
 	const [errors, setErrors] = useState<any|null>([]);
-	
+	const API_URL = import.meta.env.VITE_API_URL	
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
 		try {
 			setIsLoading(true);
-			let res = await fetch('https://qb0agssn98.execute-api.us-east-1.amazonaws.com/Production/sendContactEmail', {
+			let res = await fetch(API_URL, {
 			method: 'POST',
 			headers: {
 				'Content-Type':'application/json'
