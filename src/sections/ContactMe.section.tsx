@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef, useState } from 'react';
 import { Mail, MapPin, Send } from 'lucide-react';
+import ContactForm from '../forms/Contact.form.component';
 
 // THIS IS WHERE AWS LAMBDA IS PLANNED TO BE USED FOR SERVERLESS FORM MANAGEMENT
 // AWS LAMBDA + SNS FOR NOTIFICATIONS
@@ -9,24 +10,6 @@ import { Mail, MapPin, Send } from 'lucide-react';
 export function ContactSection() {
 	const ref = useRef(null);
 	const isInView = useInView(ref, { once: true, margin: "-100px" });
-	const [formData, setFormData] = useState({
-		name: '',
-		email: '',
-		message: '',
-	});
-
-	const handleSubmit = (e: React.FormEvent) => {
-		e.preventDefault();
-		// Handle form submission
-		console.log('Form submitted:', formData);
-	};
-
-	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-		setFormData(prev => ({
-			...prev,
-			[e.target.name]: e.target.value,
-		}));
-	};
 
 	return (
 		<section id="contact" className="py-16 px-4 relative overflow-hidden">
@@ -113,67 +96,7 @@ export function ContactSection() {
 						animate={isInView ? { opacity: 1, x: 0 } : {}}
 						transition={{ duration: 0.6, delay: 0.3 }}
 					>
-						<form onSubmit={handleSubmit} className="p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
-							<div className="space-y-6">
-								<div>
-									<label htmlFor="name" className="block text-sm mb-2 text-gray-300">
-										Name
-									</label>
-									<input
-										type="text"
-										id="name"
-										name="name"
-										value={formData.name}
-										onChange={handleChange}
-										required
-										className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-purple-400/50 focus:outline-none focus:ring-2 focus:ring-purple-400/20 text-white placeholder-gray-500 transition-all"
-										placeholder="Your name"
-									/>
-								</div>
-
-								<div>
-									<label htmlFor="email" className="block text-sm mb-2 text-gray-300">
-										Email
-									</label>
-									<input
-										type="email"
-										id="email"
-										name="email"
-										value={formData.email}
-										onChange={handleChange}
-										required
-										className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-purple-400/50 focus:outline-none focus:ring-2 focus:ring-purple-400/20 text-white placeholder-gray-500 transition-all"
-										placeholder="your.email@example.com"
-									/>
-								</div>
-
-								<div>
-									<label htmlFor="message" className="block text-sm mb-2 text-gray-300">
-										Message
-									</label>
-									<textarea
-										id="message"
-										name="message"
-										value={formData.message}
-										onChange={handleChange}
-										required
-										rows={6}
-										className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-purple-400/50 focus:outline-none focus:ring-2 focus:ring-purple-400/20 text-white placeholder-gray-500 transition-all resize-none"
-										placeholder="Tell me about your project..."
-									/>
-								</div>
-
-								<motion.button
-									type="submit"
-									className="w-full px-8 py-4 rounded-xl bg-gradient-to-r from-purple-500 to-cyan-500 text-white hover:from-purple-600 hover:to-cyan-600 transition-all shadow-lg shadow-purple-500/50 flex items-center justify-center gap-2"
-									whileHover={{ scale: 1.02 }}
-									whileTap={{ scale: 0.98 }}
-								>
-									<span>Send Message</span>
-									<Send className="w-5 h-5" />
-								</motion.button>
-							</div>
-						</form>
+						<ContactForm />						
 					</motion.div>
 				</div>
 			</div>
