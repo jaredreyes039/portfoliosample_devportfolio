@@ -18,7 +18,6 @@ export default function ContactForm(){
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
 		try {
-			console.log(JSON.stringify(formData))
 			setIsLoading(true);
 			let res = await fetch(API_URL, {
 			method: 'POST',
