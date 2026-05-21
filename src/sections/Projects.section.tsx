@@ -10,7 +10,7 @@ export default function ProjectsSection() {
 
 	const projects = [
 		{
-			title: 'OAuth Sign-in and Signup | Freelance Pro',
+			title: 'ClientStack',
 			description: 'Full-stack sample OAuth Signup/Signin page following OpenID standards in a secure NodeJS & ExpressJS backend environment connected to an SQL store.',
 			image: 'https://images.unsplash.com/photo-1587522630593-3b9e5f3255f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwd29ya3NwYWNlJTIwc2V0dXB8ZW58MXx8fHwxNzcxMzYzNzk2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
 			tags: ['React w/ Tanstack Router', 'Node.js', 'PostgreSQL', 'ExpressJS', 'PassportJS & OAuth', 'JSWT'],
@@ -107,7 +107,7 @@ export default function ProjectsSection() {
 
 							{/* Project info */}
 							<div className="p-6">
-								<a href={project.github}>
+								<a href={project.live}>
 								<h3 className="text-xl mb-2 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 transition-all">
 									{project.title}
 								</h3>
