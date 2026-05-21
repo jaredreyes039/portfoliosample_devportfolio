@@ -15,7 +15,7 @@ export default function ProjectsSection() {
 			image: 'https://images.unsplash.com/photo-1587522630593-3b9e5f3255f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwd29ya3NwYWNlJTIwc2V0dXB8ZW58MXx8fHwxNzcxMzYzNzk2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
 			tags: ['React w/ Tanstack Router', 'Node.js', 'PostgreSQL', 'ExpressJS', 'PassportJS & OAuth', 'JSWT'],
 			github: 'https://github.com/jaredreyes039/LoginSample_FreelancePro',
-			live: '#',
+			live: 'https://clientstack.org',
 		},
 		{
 			title: 'Coming Soon...',
