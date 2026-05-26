@@ -2,6 +2,7 @@ import { Briefcase, Calendar } from 'lucide-react';
 import { GradText, SectionTitle } from '../components/Typography.component';
 import {motion, useInView} from 'motion/react'
 import { useRef } from 'react';
+import ScrollVelocity from '../components/ScrollVelocity.component';
 
 export default function ExperienceSection() {
 
@@ -31,7 +32,14 @@ export default function ExperienceSection() {
 	return (
 		<section id="experience" className="py-16 px-4 relative overflow-hidden">
 			<div className="absolute inset-0 bg-gradient-to-b from-black via-purple-950/10 to-black" />
-
+			<ScrollVelocity
+				texts={["Frontend Frameworks", "Microservice Architecture", "Cloud Infrastructure", "RESTful APIs"]}
+				velocity={25}
+				className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 opacity-[0.1] -z-1"
+				numCopies={4}
+				damping={500}
+				stiffness={300}
+			/>
 			<div className="max-w-4xl mx-auto relative z-10" ref={ref}>
 				<motion.div
 					key={"experienceTitle"}

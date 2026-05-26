@@ -2,6 +2,8 @@ import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef, useState } from 'react';
 import { ExternalLink, Github } from 'lucide-react';
+import clientstackScreenCapture from '../assets/screenshots/clientstack_login.png';
+import clientstackLogo from '../assets/stack_icons/logo512.png';
 
 export default function ProjectsSection() {
 	const ref = useRef(null);
@@ -12,8 +14,9 @@ export default function ProjectsSection() {
 		{
 			title: 'ClientStack',
 			description: 'Full-stack sample OAuth Signup/Signin page following OpenID standards in a secure NodeJS & ExpressJS backend environment connected to an SQL store.',
-			image: 'https://images.unsplash.com/photo-1587522630593-3b9e5f3255f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwd29ya3NwYWNlJTIwc2V0dXB8ZW58MXx8fHwxNzcxMzYzNzk2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-			tags: ['React w/ Tanstack Router', 'Node.js', 'PostgreSQL', 'ExpressJS', 'PassportJS & OAuth', 'JSWT'],
+			image: clientstackScreenCapture,
+			logo: clientstackLogo,
+			tags: ['React w/ Tanstack Router', 'Node.js', 'PostgreSQL', 'ExpressJS', 'PassportJS & OAuth', 'JWT', 'AWS API Gateway', 'AWS EC2', 'Swagger', 'OpenAPI', 'Caddy Reverse Proxy', 'Redis', 'Express Sessions'],
 			github: 'https://github.com/jaredreyes039/LoginSample_FreelancePro',
 			live: 'https://clientstack.org',
 		},
@@ -80,7 +83,11 @@ export default function ProjectsSection() {
 									transition={{ duration: 0.4 }}
 								/>
 								<div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
-
+								{project.logo ?
+									<img className="absolute bottom-2 right-2 w-8 h-8" src={project.logo} />
+									:
+									<></>
+								}
 								{/* Links overlay */}
 								<motion.div
 									className="absolute inset-0 flex items-center justify-center gap-4"
@@ -108,22 +115,22 @@ export default function ProjectsSection() {
 							{/* Project info */}
 							<div className="p-6">
 								<a href={project.live}>
-								<h3 className="text-xl mb-2 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 transition-all">
-									{project.title}
-								</h3>
-								<p className="text-gray-400 text-sm mb-4 leading-relaxed">
-									{project.description}
-								</p>
-								<div className="flex flex-wrap gap-2">
-									{project.tags.map((tag) => (
-										<span
-											key={tag}
-											className="px-3 py-1 text-xs rounded-full bg-white/5 border border-white/10 text-gray-300"
-										>
-											{tag}
-										</span>
-									))}
-								</div>
+									<h3 className="text-xl mb-2 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 transition-all">
+										{project.title}
+									</h3>
+									<p className="text-gray-400 text-sm mb-4 leading-relaxed">
+										{project.description}
+									</p>
+									<div className="flex flex-wrap gap-2">
+										{project.tags.map((tag) => (
+											<span
+												key={tag}
+												className="px-3 py-1 text-xs rounded-full bg-white/5 border border-white/10 text-gray-300"
+											>
+												{tag}
+											</span>
+										))}
+									</div>
 								</a>
 							</div>
 						</motion.div>
