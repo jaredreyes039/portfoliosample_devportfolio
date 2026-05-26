@@ -58,13 +58,13 @@ export default function SkillsSection() {
 	];
 
 	return (
-		<section id="skills" className="relative py-16 px-4 flex flex-col items-center justify-center overflow-hidden" ref={ref}>
+		<section id="skills" className="relative md:py-16 px-4 flex flex-col items-center justify-center overflow-hidden" ref={ref}>
 			<motion.div
 				key={"experienceTitle"}
 				initial={{opacity: 0.01, y: 30}}
 				animate={isInView ? {opacity: 1, y: 0}:{}}
 				transition={{duration: 0.6}}
-				className="text-center mb-16"
+				className="text-center md:mb-16"
 			>
 				<SectionTitle>
 					<GradText>Modern</GradText> Tech Stack
