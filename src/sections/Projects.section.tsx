@@ -17,7 +17,7 @@ export default function ProjectsSection() {
 			image: clientstackScreenCapture,
 			logo: clientstackLogo,
 			tags: ['React w/ Tanstack Router', 'Node.js', 'PostgreSQL', 'ExpressJS', 'PassportJS & OAuth', 'JWT', 'AWS API Gateway', 'AWS EC2', 'Swagger', 'OpenAPI', 'Caddy Reverse Proxy', 'Redis', 'Express Sessions'],
-			github: 'https://github.com/jaredreyes039/LoginSample_FreelancePro',
+			github: 'https://github.com/jaredreyes039/ClientStack',
 			live: 'https://clientstack.org',
 		},
 		{
@@ -98,14 +98,12 @@ export default function ProjectsSection() {
 									<a
 										href={project.github}
 										className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all"
-										onClick={(e) => e.preventDefault()}
 									>
 										<Github className="w-5 h-5 text-white" />
 									</a>
 									<a
 										href={project.live}
 										className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all"
-										onClick={(e) => e.preventDefault()}
 									>
 										<ExternalLink className="w-5 h-5 text-white" />
 									</a>
