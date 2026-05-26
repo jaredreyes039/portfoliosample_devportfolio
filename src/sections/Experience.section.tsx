@@ -35,7 +35,7 @@ export default function ExperienceSection() {
 			<ScrollVelocity
 				texts={["Frontend Frameworks", "Microservice Architecture", "Cloud Infrastructure", "RESTful APIs"]}
 				velocity={25}
-				className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 opacity-[0.1] -z-1"
+				className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 opacity-[0.1] -z-1"
 				numCopies={4}
 				damping={500}
 				stiffness={300}
