@@ -60,7 +60,7 @@ export default function Nav() {
 				<div className="flex flex-col items-center justify-center h-full gap-8">
 					{SECTIONS.map((section) => {
 						return (
-							<a href={section[1]} className="text-gray-300 hover:text-white cursor-pointer transition-colors relative group">
+							<a href={section[1]} onClick={()=>setIsMobileMenuOpen(false)} className="text-gray-300 hover:text-white cursor-pointer transition-colors relative group">
 								{section[0]}
 								<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-cyan-400 group-hover:w-full transition-all duration-300" />
 
