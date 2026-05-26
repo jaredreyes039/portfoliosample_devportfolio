@@ -64,17 +64,14 @@ export default function SkillsSection() {
 				initial={{opacity: 0.01, y: 30}}
 				animate={isInView ? {opacity: 1, y: 0}:{}}
 				transition={{duration: 0.6}}
-				className="text-center md:mb-16"
+				className="text-center mb-8 md:mb-16"
 			>
 				<SectionTitle>
 					<GradText>Modern</GradText> Tech Stack
 				</SectionTitle>
 				<div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-cyan-500 mx-auto rounded-full" />
 			</motion.div>
-			
-			<div>		
 			<GridMotion items={items} /> 
-			</div>
 		</section>
 	);
 }
