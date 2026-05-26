@@ -20,12 +20,12 @@ const GridMotion: FC<GridMotionProps> = ({ items = [], gradientColor = 'black' }
 	useEffect(() => {
 		gsap.ticker.lagSmoothing(0);
 
-		const handleMouseMove = (e: MouseEvent): void => {
+		const handleMouseMove = (e: PointerEvent): void => {
 				mouseXRef.current = e.clientY
 		};
 
 		const updateMotion = (): void => {
-			const maxMoveAmount = 150;
+			const maxMoveAmount = window.innerWidth > 600 ? 150 : 75;
 			const baseDuration = 0.8;
 			const inertiaFactors = [0.6, 0.4, 0.3, 0.2];
 
@@ -45,10 +45,10 @@ const GridMotion: FC<GridMotionProps> = ({ items = [], gradientColor = 'black' }
 		};
 
 		const removeAnimationLoop = gsap.ticker.add(updateMotion);
-		window.addEventListener('mousemove', handleMouseMove);
+		window.addEventListener('pointermove', handleMouseMove);
 
 		return () => {
-			window.removeEventListener('mousemove', handleMouseMove);
+			window.removeEventListener('pointermove', handleMouseMove);
 			removeAnimationLoop();
 		};
 	}, []);
