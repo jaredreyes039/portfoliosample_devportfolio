@@ -73,7 +73,7 @@ export default function SkillsSection() {
 			</motion.div>
 			
 			<div>		
-			<GridMotion items={items} gradientColor="#f7f6ff"/>
+			<GridMotion items={items} /> 
 			</div>
 		</section>
 	);
