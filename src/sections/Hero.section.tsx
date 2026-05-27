@@ -11,7 +11,6 @@ export default function HeroSection() {
 	const TITLE_STR = "Software Engineer"
 	const TITLE_STR_ARR = [...TITLE_STR]
 	
-	// BUG: For some reason the rendering for the NAME_STR_ARR is not including the space between "Jared" and "Reyes" despite doing so for "Web Developer" when rendering TITLE_STR_ARR, this seems to be a working solution for now, I've checked Typography.component.tsx and the current file but found no discernable cause
 	NAME_STR_ARR.splice(5,0,`\u00A0`);
 
 	return (
