@@ -27,7 +27,6 @@ export default function SkillsSection() {
 	const ref = useRef(null);
 	const isInView = useInView(ref, {once: true, margin: '-100px'})
 
-
 	const TOOLS_ARR = ['Git', 'Linux', 'Jest', 'Redux', 'Scripting', 'Python', 'Microservices', 'GraphQL', 'OAuth', 'REST APIs', 'Figma', 'Gatsby', 'Storybook', 'Swagger', 'Winston', 'AWS Lambda', 'Cloud Computing', 'AWS Amplify', 'AWS IAM', 'AWS SNS', 'Caddy', 'Nginx'];
 	const SKILLS_ARR = [
 		{
@@ -35,8 +34,8 @@ export default function SkillsSection() {
 			skills: [
 				{ name: 'Tanstack React w/ Vite', level: 100 },
 				{ name: 'TypeScript', level: 90 },
-				{ name: 'Next.js', level: 88 },
-				{ name: 'Tailwind CSS', level: 92 },
+				{ name: 'Next.js & SSR', level: 88 },
+				{ name: 'Tailwind CSS & UI Libraries', level: 92 },
 			],
 			gradient: 'from-purple-500 to-pink-500',
 		},
@@ -44,16 +43,16 @@ export default function SkillsSection() {
 			category: 'Backend',
 			skills: [
 				{ name: 'Node.js', level: 90 },
-				{ name: 'PostgreSQL', level: 85 },
-				{ name: 'ExpressJS', level: 82 },
-				{ name: 'MongoDB', level: 80 },
+				{ name: 'Databases and Data Design', level: 85 },
+				{ name: 'RESTful APIs', level: 82 },
+				{ name: 'Networking', level: 80 },
 			],
 			gradient: 'from-cyan-500 to-blue-500',
 		},
 		{
 			category: 'CI/CD & Cloud',
 			skills: [
-				{ name: 'Microservice Architecture', level: 87 },
+				{ name: 'Observability', level: 87 },
 				{ name: 'Cloud Services (AWS/Azure)', level: 83 },
 				{ name: 'Docker & Kubernetes', level: 65 },
 			],
@@ -90,7 +89,6 @@ export default function SkillsSection() {
 		<img src={amplify} key='amplify-icon-2' className="row__item-img" />,
 		<img src={postgres} key='postgres-icon' className="row__item-img"/>,
 		<img src={apigw} key='apigw-icon' className="row__item-img"/>,
-
 	];
 
 	return (
