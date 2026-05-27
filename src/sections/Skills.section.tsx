@@ -145,7 +145,7 @@ export default function SkillsSection() {
 					))}
 
 				</div>
-				<div className="relative mt-12 text-center w-full">
+				<div className="hidden md:block relative mt-12 text-center w-full">
 					<p className="text-gray-400 mb-4">Also experienced with:</p>
 					<div className="flex flex-wrap justify-center gap-3">
 						{TOOLS_ARR.map((tool, idx) => (
