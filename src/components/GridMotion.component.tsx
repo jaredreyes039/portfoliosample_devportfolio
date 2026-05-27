@@ -32,7 +32,7 @@ const GridMotion: FC<GridMotionProps> = ({ items = [], gradientColor = 'black' }
 			rowRefs.current.forEach((row, index) => {
 				if (row) {
 					const direction = index % 2 === 0 ? 1 : -1;
-					const moveAmount = ((mouseXRef.current / window.innerWidth) * maxMoveAmount - maxMoveAmount / 2) * direction;
+					const moveAmount = ( (mouseXRef.current/window.innerWidth) * maxMoveAmount - maxMoveAmount / 2) * direction;
 
 					gsap.to(row, {
 						x: moveAmount,
