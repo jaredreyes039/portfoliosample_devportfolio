@@ -53,7 +53,7 @@ export default function SkillsSection() {
 			category: 'CI/CD & Cloud',
 			skills: [
 				{ name: 'Observability', level: 87 },
-				{ name: 'Cloud Services (AWS/Azure)', level: 83 },
+				{ name: 'Cloud Services', level: 83 },
 				{ name: 'Docker & Kubernetes', level: 65 },
 			],
 			gradient: 'from-green-500 to-emerald-500',
