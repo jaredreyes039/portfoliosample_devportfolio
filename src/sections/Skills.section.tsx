@@ -93,21 +93,20 @@ export default function SkillsSection() {
 
 	return (
 		<section id="skills" className="relative md:py-16 px-4 flex flex-col items-center justify-center overflow-hidden " ref={ref}>
-			<div className="mx-auto"/>
-			<motion.div
-				key={"experienceTitle"}
-				initial={{opacity: 0.01, y: 30}}
-				animate={isInView ? {opacity: 1, y: 0}:{}}
-				transition={{duration: 0.6}}
-				className="text-center mb-8 md:mb-16"
-			>
-				<SectionTitle>
-					<GradText>Modern</GradText> Technologies
-				</SectionTitle>
-				<div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-cyan-500 mx-auto rounded-full" />
-			</motion.div>
-			<div className="relative md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 z-10 w-full px-4 md:px-16 flex flex-col">
-				<div className="grid md:grid-cols-3 gap-8  w-full px-4 md:px-16 ">
+			<div className="mx-auto max-w-6xl relative z-10 backdrop-blur">
+				<motion.div
+					key={"experienceTitle"}
+					initial={{opacity: 0.01, y: 30}}
+					animate={isInView ? {opacity: 1, y: 0}:{}}
+					transition={{duration: 0.6}}
+					className="text-center mb-8 md:mb-16"
+				>
+					<SectionTitle>
+						<GradText>Modern</GradText> Technologies
+					</SectionTitle>
+					<div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-cyan-500 mx-auto rounded-full" />
+				</motion.div>
+				<div className="grid md:grid-cols-3 gap-8  px-4 md:px-16 ">
 					{SKILLS_ARR.map((category) => (
 						<div
 							key={category.category}
@@ -145,7 +144,7 @@ export default function SkillsSection() {
 					))}
 
 				</div>
-				<div className="hidden md:block relative mt-12 text-center w-full">
+				<div className="hidden md:block relative mt-12 text-center ">
 					<p className="text-gray-400 mb-4">Also experienced with:</p>
 					<div className="flex flex-wrap justify-center gap-3">
 						{TOOLS_ARR.map((tool, idx) => (
@@ -162,7 +161,7 @@ export default function SkillsSection() {
 					</div>
 				</div>
 			</div>
-			<div className="md:left-0 md:top-0 md:translate-x-0 md:translate-y-0 md:relative absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+			<div className="md:left-0 md:top-0 md:translate-x-0 md:translate-y-0 z-0 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
 				<GridMotion items={items} /> 
 			</div>
 		</section>
