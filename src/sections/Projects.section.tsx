@@ -2,8 +2,11 @@ import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef, useState } from 'react';
 import { ExternalLink, Github } from 'lucide-react';
-import clientstackScreenCapture from '../assets/screenshots/clientstack_login.png';
+import clientStackMicroserviceSampleThumbnail from '../assets/thumbnails/clientStack_microserviceSample_thumbnail.png';
+import clientStackProductSiteThumbnail from '../assets/thumbnails/clientStack_productsite_thumbnail.png';
+import clientStackSassSampleThumbnail from '../assets/thumbnails/clientStack_SASS_sample_thumbnail.png';
 import clientstackLogo from '../assets/stack_icons/logo512.png';
+
 
 export default function ProjectsSection() {
 	const ref = useRef(null);
@@ -12,27 +15,27 @@ export default function ProjectsSection() {
 
 	const projects = [
 		{
-			title: 'ClientStack',
+			title: 'Microservice Sample: ClientStack Auth',
 			description: 'Full-stack sample OAuth Signup/Signin page following OpenID standards in a secure NodeJS & ExpressJS backend environment connected to an SQL store.',
-			image: clientstackScreenCapture,
+			image: clientStackMicroserviceSampleThumbnail,
 			logo: clientstackLogo,
-			tags: ['React w/ Tanstack Router', 'Node.js', 'PostgreSQL', 'ExpressJS', 'PassportJS & OAuth', 'JWT', 'AWS API Gateway', 'AWS EC2', 'Swagger', 'OpenAPI', 'Caddy Reverse Proxy', 'Redis', 'Express Sessions'],
+			tags: ['Microservice', 'Vite w/ Tanstack Router', 'Node.js', 'PostgreSQL', 'ExpressJS', 'PassportJS', 'OIDC', 'JWT', 'AWS API Gateway', 'AWS EC2', 'Swagger API Docs', 'OpenAPI', 'Nginx', 'Redis', 'Log Aggregation'],
 			github: 'https://github.com/jaredreyes039/ClientStack',
 			live: 'https://clientstack.org',
 		},
 		{
-			title: 'Coming Soon...',
+			title: 'UI/UX Sample: Coming Soon...',
 			description: '',
-			image: 'https://images.unsplash.com/photo-1762279389042-9439bfb6c155?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMG5lb24lMjB0ZWNobm9sb2d5fGVufDF8fHx8MTc3MTQ2NjU2OHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-			tags: ['', '', '', ''],
+			image: clientStackProductSiteThumbnail,
+			tags: ['UI/UX Design', 'Vite', 'Landing Page', 'TailwindCSS', 'AWS Amplify', 'SEO Optimization'],
 			github: '#',
 			live: '#',
 		},
 		{
-			title: 'Coming Soon...',
+			title: 'SASS Product w/ Microservice Backend: Coming Soon...',
 			description: '',
-			image: 'https://images.unsplash.com/photo-1646153389640-958d7ba1a864?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjBjb2RpbmclMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzcxNDY2NTY4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-			tags: ['', '', '', ''],
+			image: clientStackSassSampleThumbnail,
+			tags: ['NodeJS', 'ExpressJS', '', ''],
 			github: '#',
 			live: '#',
 		},
