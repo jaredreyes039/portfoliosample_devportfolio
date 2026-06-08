@@ -15,8 +15,8 @@ export default function ProjectsSection() {
 
 	const projects = [
 		{
-			title: 'Microservice Sample: ClientStack Auth',
-			description: 'Full-stack sample OAuth Signup/Signin page following OpenID standards in a secure NodeJS & ExpressJS backend environment connected to an SQL store.',
+			title: 'Auth Service Sample: ClientStack Auth',
+			description: 'Full-stack sample OAuth Signup/Signin page following OpenID standard, implementing a user notification pipeline as well as an auth proxy gateway ready for integration with a larger microservice or microkernel architecture.',
 			image: clientStackMicroserviceSampleThumbnail,
 			logo: clientstackLogo,
 			tags: ['Microservice', 'Vite w/ Tanstack Router', 'Node.js', 'PostgreSQL', 'ExpressJS', 'PassportJS', 'OIDC', 'JWT', 'AWS API Gateway', 'AWS EC2', 'Swagger API Docs', 'OpenAPI', 'Nginx', 'Redis', 'Log Aggregation'],
@@ -24,7 +24,7 @@ export default function ProjectsSection() {
 			live: 'https://clientstack.org',
 		},
 		{
-			title: 'UI/UX Sample: Coming Soon...',
+			title: 'UI/UX Design Sample: ClientStack SASS Product [Coming Soon...]',
 			description: '',
 			image: clientStackProductSiteThumbnail,
 			tags: ['UI/UX Design', 'Vite', 'Landing Page', 'TailwindCSS', 'AWS Amplify', 'SEO Optimization'],
@@ -32,7 +32,7 @@ export default function ProjectsSection() {
 			live: '#',
 		},
 		{
-			title: 'SASS Product w/ Microservice Backend: Coming Soon...',
+			title: 'SASS Product w/ Microservice Backend: [Coming Soon...]',
 			description: '',
 			image: clientStackSassSampleThumbnail,
 			tags: ['NodeJS', 'ExpressJS', '', ''],
