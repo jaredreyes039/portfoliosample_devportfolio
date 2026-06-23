@@ -5,8 +5,8 @@ import { ExternalLink, Github } from 'lucide-react';
 import clientStackMicroserviceSampleThumbnail from '../assets/thumbnails/clientStack_microserviceSample_thumbnail.png';
 import clientStackProductSiteThumbnail from '../assets/thumbnails/clientStack_productsite_thumbnail.png';
 import clientStackSassSampleThumbnail from '../assets/thumbnails/clientStack_SASS_sample_thumbnail.png';
+// import linuxConfigThumbnail from '../assets/thumbnails/linuxConfig_thumbnail.png'
 import clientstackLogo from '../assets/stack_icons/logo512.png';
-
 
 export default function ProjectsSection() {
 	const ref = useRef(null);
@@ -24,12 +24,12 @@ export default function ProjectsSection() {
 			live: 'https://clientstack.org',
 		},
 		{
-			title: 'UI/UX Design Sample: ClientStack SASS Product [Coming Soon...]',
-			description: '',
+			title: 'UI/UX Design Sample: ClientStack SaaS Platform',
+			description: 'A landing page marketing SaaS platform, ClientStack demonstrating a pixel-perfect translation from responsive design to application, AWS Amplify hosting with Cloudflare registration under the larger clientstack ecosystem,, and ultimately integration into the larger ClientStack sample microservice architecture.',
 			image: clientStackProductSiteThumbnail,
 			tags: ['UI/UX Design', 'Vite', 'Landing Page', 'TailwindCSS', 'AWS Amplify', 'SEO Optimization'],
-			github: '#',
-			live: '#',
+			github: 'https://github.com/jaredreyes039/ClientStack_ProductSite',
+			live: 'https://product.clientstack.org',
 		},
 		{
 			title: 'SASS Product w/ Microservice Backend: [Coming Soon...]',
@@ -39,6 +39,14 @@ export default function ProjectsSection() {
 			github: '#',
 			live: '#',
 		},
+		//{
+		//	title: 'My Linux Configs (For the Hyprland Nerds)',
+		//	description: "A collection of my important config files that I use to maintain my development environment built on arch. From terminal and toolbar customization to a full Neovim IDE based on the Kickstart.nvim project, my hyprland playground is where I call home, and I'm happy to share some of that home with others!",
+		//	image: linuxConfigThumbnail,
+		//	tags:['Linux', 'Hyprland', 'Neovim', 'Kitty', 'Waybar', 'Wayland', 'Configuration'],
+		//	github:'#',
+		//	live: '#'
+		//}
 	];
 
 	return (
@@ -71,6 +79,7 @@ export default function ProjectsSection() {
 							animate={isInView ? { opacity: 1, y: 0 } : {}}
 							transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
 							onMouseEnter={() => setHoveredIndex(index)}
+							onTouchStart={() => setHoveredIndex(index)}	
 							onMouseLeave={() => setHoveredIndex(null)}
 							className="group relative rounded-2xl overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10 hover:border-purple-400/50 transition-all"
 						>
@@ -115,13 +124,14 @@ export default function ProjectsSection() {
 
 							{/* Project info */}
 							<div className="p-6">
-								<a href={project.live}>
 									<h3 className="text-xl mb-2 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 transition-all">
-										{project.title}
+										<a href={project.live.length > 1 ? project.live : project.github}> {project.title} </a>
 									</h3>
-									<p className="text-gray-400 text-sm mb-4 leading-relaxed">
+									<div className={`${hoveredIndex === index ? 'line-clamp-none text-pretty' : ''} group-hover:text-pretty group-hover:line-clamp-none text-ellipsis line-clamp-3 `}>
+									<p className="text-gray-400 text-sm mb-4 leading-relaxed ">
 										{project.description}
 									</p>
+									</div>
 									<div className="flex flex-wrap gap-2">
 										{project.tags.map((tag) => (
 											<span
@@ -132,7 +142,6 @@ export default function ProjectsSection() {
 											</span>
 										))}
 									</div>
-								</a>
 							</div>
 						</motion.div>
 					))}
