@@ -6,7 +6,7 @@ import ScrollVelocity from "../components/ScrollVelocity.component";
 export default function HeroSection() {
 
 	// For text animation
-	const NAME_STR = "Jared Reyes";
+	const NAME_STR = "Jay  Reyes";
 	const NAME_STR_ARR = [...NAME_STR]
 	const TITLE_STR = "Software Engineer"
 	const TITLE_STR_ARR = [...TITLE_STR]

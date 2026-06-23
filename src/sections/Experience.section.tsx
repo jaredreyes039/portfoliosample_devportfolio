@@ -16,7 +16,7 @@ export default function ExperienceSection() {
 			period: '2022 - Present',
 			description: 'Built MVP and core features for a SaaS platform, constructed the front end for a now defunct fasion site, and interfaced code with third-party software to assist users with transitioning into the software.',
 			highlights: [
-				"Led the recovery and modernization of an abandoned startup MVP, successfully migrating the application from Angular 13 to Angular 15 and helping secure a six-figure investment following the platform overhaul.",
+				"Led the recovery and modernization of an abandoned startup MVP, successfully migrating the application from Angular 13 to Angular 15.",
 "Designed, deployed, and maintained secure backend infrastructure and server environments across multiple frameworks, languages, and cloud platforms for startups, small businesses, and independent clients.",
 "Configured, administered, and optimized Linux-based systems for both client environments and personal development infrastructure.",
 "Built and managed a complete DevOps pipeline using Azure DevOps, including CI/CD workflows, release management, and collaborative development processes.",

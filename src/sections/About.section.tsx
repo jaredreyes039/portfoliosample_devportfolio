@@ -51,13 +51,13 @@ export default function AboutSection() {
 						<div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl blur-2xl opacity-20" />
 						<img
 							src={portrait} alt="Workspace"
-							className="filter grayscale relative rounded-2xl object-top w-full md:h-128 object-cover border border-white/10"
+							className="relative rounded-2xl object-top w-full h-96 md:h-128 object-cover border border-white/10"
 						/>
 					</div>
 
 					<div className="space-y-6">
 						<p className="text-lg text-gray-300 leading-relaxed">
-							Hi, I’m Jared, a full stack software engineer specializing in application modernization, cloud infrastructure, and DevOps. I build scalable web applications and backend systems using React, TypeScript, Node.js, Linux, and modern CI/CD workflows, with a focus on performance, maintainability, and developer experience.
+							Hi, I’m Jay, a full stack software engineer specializing in application modernization, cloud infrastructure, and DevOps. I build scalable web applications and backend systems using React, TypeScript, Node.js, Linux, and modern CI/CD workflows, with a focus on performance, maintainability, and developer experience.
 						</p>
 						<p className="text-lg text-gray-300 leading-relaxed">
 							After stepping away from the industry to serve as a family caregiver, I returned with a renewed focus on modern web technologies, clean architecture, and efficient tooling. I’m driven by continuous learning, curiosity, and building scalable, maintainable systems.
